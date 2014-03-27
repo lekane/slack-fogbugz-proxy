@@ -1,2 +1,2 @@
-slack-fogbugz-proxy
-===================
+Slack Fogbugz Integration proxy
+===============================
