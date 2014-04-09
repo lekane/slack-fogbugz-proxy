@@ -1,5 +1,8 @@
 package main
 
+// Copyright Lekane Oy. All rights reserved.
+// Written by Kim Blomqvist <kim.blomqvist@lekane.com>
+
 import (
 	"bytes"
 	"encoding/json"
