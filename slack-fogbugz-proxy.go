@@ -59,7 +59,12 @@ func post(text string) {
 		return
 	}
 	fmt.Printf("Posting: %s\n", b)
-	http.Post(webhookurl, "text/json", bytes.NewReader(b))
+	resp, sendErr := http.Post(webhookurl, "text/json", bytes.NewReader(b))
+	defer resp.Body.Close()
+	if sendErr != nil {
+		fmt.Printf("ERROR '%s' sending message\n", err)
+		return
+	}
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
